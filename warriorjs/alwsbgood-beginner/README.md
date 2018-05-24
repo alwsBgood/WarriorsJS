@@ -1,35 +1,37 @@
-## alwsBgood - beginner - level 3
+## alwsBgood - beginner - level 5
 
-### _The air feels thicker than before. There must be a horde of sludge._
+### _You hear cries for help. Captives must need rescuing._
 
-> **TIP:** Be careful not to die! Use `warrior.health()` to keep an eye on your health, and `warrior.rest()` to earn 10% of your max health back.
+> **TIP:** When you find a unit, use `!unit.isEnemy() && unit.isBound()` to see if he's a captive and `warrior.rescue()` to rescue him. Don't attack captives.
 
 
 ### Floor Map
 
 ```
-╔═════════╗
-║@ s ss s>║
-╚═════════╝
+╔═══════╗
+║@ CaaSC║
+╚═══════╝
 
 @ = alwsBgood (20 HP)
-s = Sludge (12 HP)
-> = stairs
+C = Captive (1 HP)
+a = Archer (7 HP)
+S = Thick Sludge (24 HP)
 ```
 
 ### Abilities
 
 #### Actions (only one per turn)
 
-* `warrior.rest()`: Gain 10% of max health back, but do nothing more.
+* `warrior.rescue()`: Release a unit from his chains in the given direction (forward by default).
 * `warrior.walk()`: Move one space in the given direction (forward by default).
 * `warrior.attack()`: Attack a unit in the given direction (forward by default) dealing 5 HP of damage.
+* `warrior.rest()`: Gain 10% of max health back, but do nothing more.
 
 #### Senses
 
-* `warrior.health()`: Return an integer representing your health.
 * `warrior.think()`: Think about your options before choosing an action.
 * `warrior.feel()`: Return the adjacent space in the given direction (forward by default).
+* `warrior.health()`: Return an integer representing your health.
 
 ### Next Steps
 
